@@ -2,56 +2,36 @@
 <html>
 <head>
 <style>
-.maindiv{
-  width: 50%;
-  margin: auto;
-}
-.divContent{
-  background-color: yellow;
+.positionOuter{
+  position: absolute;
+  height: auto;
   width: 100%;
+  background-color: aqua;
+}
+.positionInner{
+  position: relative;
+  height: auto;
+  width: 50%;
+  background-color: green;
+  left: 0px;
+  padding: 1em 0em 5em 0em;
+}
+h1{
+  voice-family: male;
+  richness: 80;
 }
 </style>
 </head>
 <body>
-
-<table id="t01">
-  
-  <tr>
-    <td><span class="maindiv">
-      <div class="divContent">abc</div>
-      <div class="divContent">def</div>
-      <div class="divContent">ghi</div>
-      <div class="divContent">jkl</div>
-    </span></td>
-  </tr>
-  
-  <tr>
-    <td><div class="maindiv">
-      <div class="divContent">mno</div>
-      <div class="divContent">pqr</div>
-      <div class="divContent">stu</div>
-      <div class="divContent">vwx</div>
-    </div></td>
-  </tr>
-
-  <tr>
-    <td><div class="maindiv">
-      <div class="divContent">123</div>
-      <div class="divContent">456</div>
-      <div class="divContent">789</div>
-      <div class="divContent">1011</div>
-    </div></td>
-  </tr>
-
-  <tr>
-    <td><div class="maindiv">
-      <div class="divContent">1213</div>
-      <div class="divContent">1415</div>
-      <div class="divContent">1617</div>
-      <div class="divContent">1819</div>
-    </div></td>
-  </tr>
-</table>
+<div class="positionOuter">
+  <div class="positionInner">
+    this is text.<br>
+    this is text.<br>
+    this is text.<br>
+    this is text.<br>
+    <h1>Dheeraj Kumar Mehta</h1>
+  </div>
+</div>
 
 </body>
 </html>
