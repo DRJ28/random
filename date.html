@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Date Picker Validation</title>
+	<script type="text/javascript">
+		function valdateDate() {
+			console.log('Validating date here');
+			var datefrom = new Date(document.getElementById("dateFrom").value);	
+			var dateto = new Date(document.getElementById("dateTo").value);	
+			if (datefrom < dateto) {
+				var millisecondsPerDay = 1000 * 60 * 60 * 24;
+				var miliBetween = dateto.getTime() - datefrom.getTime();
+				var days = miliBetween / millisecondsPerDay;
+				console.log('Number of days between required days are ' + days);
+				var dd = datefrom.getDate();
+				var mm = datefrom.getMonth() + 1;
+				var yy = datefrom.getFullYear();
+				debugger;
+			}else{
+				alert('Date ');
+			}			
+		}
+	</script>
+</head>
+<body>
+	<h1>Date Picker</h1>
+	<label>Select Date range</label>: <input type='date' id='dateFrom'> To <input type='date' max='2015-10-26' id='dateTo'><br>
+	<input type='button' value='Submit' onclick='valdateDate()'>
+</body>
+</html>
