@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>CSS POSITIONING</title>
+	<style type="text/css">
+		.div-before{
+			background-color: black;
+			height: 20%;
+		}
+		.div-1{
+			background-color: green;
+			height: 18%;
+			position: relative;
+		}
+		.div-2{
+			background-color: yellow;
+			height: 100%;
+			width: 50%;
+			position: absolute;
+			left: 0px;
+		}
+		.div-3{
+			background-color: blue;
+			width: 50%;
+			right: 0px;
+			position: absolute;
+		}
+		.div-4{
+			background-color: aqua;
+		}
+		.div-5{
+			background-color: grey;
+			margin-left: 3em;
+			padding-left: 2em;
+		}
+		.div-after{
+			background-color: red;
+			height: 20%;
+		}
+	</style>
+</head>
+<body>
+	<div class="div-before"><input type="button" value="adjust" onclick="adjustHeight()"></div>
+	<script type="text/javascript">
+		function adjustHeight (e) {
+			console.log('Adjust Height of Div');
+			debugger;
+		}
+	</script>
+	<div class="div-1">
+		<div class="div-2">12
+		</div>
+		<div class="div-3">
+			this is para<br>
+			this is para<br>
+			this is para<br>
+			this is para<br>
+			this is para<br>
+			this is para<br>
+		</div>
+	</div>
+	<div class="div-4">
+		<div class="div-5">dheeraj<br>kumar<br>mehta</div>
+	</div>
+	<div class="div-after"></div>
+</body>
+</html>
