@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pick a Date</title>
+        <link rel='stylesheet' type='text/css' href='datePickerCss.css'/>
+        <link rel='stylesheet' type='text/css' href='jquery-ui/jquery-ui.css'/>
+        <script src="angular.min.js"></script>
+        <script src="jquery-ui/C.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        <script type='text/javascript' src='controller.js'></script>
+	</head>
+	<body ng-app='tyrDatePicker' ng-controller='myClt'>
+		<div id="header">
+			<h2><br/>Select a Destination</h2>
+		</div>
+        <div class="left">
+            <p>Departing: <input type="text" id="departing"></p>
+        </div>
+        <div class="right">
+            <p>Returning: <input type="text" id="returning"></p>
+        </div><br/>
+        <div id="main">
+        	<p>Destination: <select id="dropdown">
+				<option value="newyork">New York</option>
+				<option value="london">London</option>
+				<option value="beijing">Beijing</option>
+				<option value="moscow">Moscow</option>
+			</select></p>
+            {{name}}{{selectedDate}}
+			<button>Submit</button>
+            <date-picker max='2015-11-26' min='2015-11-10'></date-picker>
+        </div>
+	</body>
+</html>
