@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX</title>
+	<style>
+		.downArrow{
+		}
+	</style>
+
+	<script>
+		function makeCall () {
+			console.log('in ajax making process');
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(response) {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+				    document.getElementById("demo").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "https://api.myjson.com/bins/3wzmx", true);
+			xhttp.send();
+		}
+	</script>
+</head>
+<body style="background-color: aliceblue;">
+
+<div id="demo"><h2>AJAX will change this :-)</h2></div>
+
+<button type="button" onclick="makeCall()">MakeAjaxRequest</button>
+</br></br>
+<div class="downArrow"></div>
+</body>
+</html>
