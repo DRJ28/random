@@ -1,0 +1,93 @@
+.square{
+	height: 50px;
+	width: 50px;
+	background: red;
+}
+
+.rectangle{
+	height: 50px;
+	width: 100px;
+	background: red;
+}
+
+.circle{
+	background: green;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.oval{
+	height: 50px;
+	width: 100px;
+	border-radius: 100px/50px;
+	background: green;
+}
+
+.triangleUp{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+
+.triangleDown{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid green;
+}
+
+.triangleLeft{
+	width: 0;
+	height: 0;
+	border-right: 100px solid green;
+	border-bottom: 50px solid transparent;
+	border-top: 50px solid transparent;
+}
+
+.triangleRight{
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid transparent;
+	border-left: 100px solid red;
+	border-top: 50px solid transparent;
+}
+
+.parallelogram{
+	height: 100px;
+	width: 150px;
+	background: green;
+	transform:skew(25deg);
+}
+
+.hexagon {
+	width: 100px;
+	height: 55px;
+	background: red;
+	position: relative;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+}
