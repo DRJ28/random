@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Spinner</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<style>
+		#loader{
+			width: 50px;
+			height: 50px;
+			border: 5px solid #ccc;
+			border-top-color: green;
+			border-radius: 100%;
+
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+
+			animation: round 2s ease-in-out infinite;
+		}
+		@keyframes round{
+			from{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+	</style>
+</head>
+
+<body ng-app="Spinner" ng-controller='appCont'>
+	
+	<div ng-show='loading' id='loader'></div>
+
+	<div ng-controller='divCont'>
+		<ul>
+			<li ng-repeat='per in person'>{{per.fname }} {{per.lname}}</li>
+		</ul>
+	</div>
+
+	<script>
+		angular.module('Spinner',[]).controller('divCont',['$scope', '$http', function($scope, $http) {
+			// body...
+			$scope.$emit('load');
+			$http.jsonp('http://www.filltext.Com/?callback=JSON_CALLBACK&delay=5&rows=5&fname={firstName}&lname={lastName}').success(function(data){
+				debugger;
+				$scope.person = data;
+				$scope.$emit('unload');
+			});
+		}]).controller('appCont', ['$scope', function($scope){
+			//second controller\
+			$scope.$on('load', function(){
+				$scope.loading = true;
+			});
+			$scope.$on('unload', function(){
+				$scope.loading = false;
+			});
+		}]);
+	</script>
+</body>
+</html>
